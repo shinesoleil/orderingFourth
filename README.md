@@ -23,13 +23,16 @@ real: 6 min
  r: 6 min
  
 9. return a list of products when GET products  
- e: 5 min
+ e: 5 min  
+ r: 15 min  
+ reason: should have implement Record interface
  
 
 * ###/products/{productId}
 
 1. return 200 when GET product by product id  
- e: 5 min 
+ e: 5 min  
+ r: 
  
 
 2. return 404 when GET product by product id fails  

@@ -1,6 +1,12 @@
 package com.thoughtworks.api.domain.product;
 
-public class Product {
+import com.thoughtworks.api.infrastructure.records.Record;
+import com.thoughtworks.api.web.jersey.Routes;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Product implements Record{
   private String id;
   private String name;
   private String description;
@@ -32,4 +38,21 @@ public class Product {
   public double getPrice() {
     return price;
   }
+
+
+  public Map<String, Object> toRefJson(Routes routes) {
+    return new HashMap<String, Object>() {{
+      put("id", getId());
+      put("uri", "product/" + getId());
+      put("name", getName());
+      put("description", getDescription());
+      put("price", getPrice());
+    }};
+  }
+
+
+  public Map<String, Object> toJson(Routes routes) {
+    return toRefJson(routes);
+  }
+
 }
