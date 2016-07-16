@@ -59,4 +59,12 @@ public class TestHelper {
             put("price", 610.00);
         }};
     }
+
+    public static Map<String, Object> productMapApi() {
+        return new HashMap<String, Object>() {{
+            put("name", "desk");
+            put("description", "black");
+            put("price", 610.00);
+        }};
+    }
 }

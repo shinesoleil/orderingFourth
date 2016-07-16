@@ -2,12 +2,11 @@ package com.thoughtworks.api.web;
 
 import com.thoughtworks.api.support.ApiSupport;
 import com.thoughtworks.api.support.ApiTestRunner;
+import com.thoughtworks.api.support.TestHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import javax.ws.rs.core.Response;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,10 +15,8 @@ import static org.hamcrest.core.Is.is;
 public class ProductApiTest extends ApiSupport{
 
   @Test
-  public void should_return_201_when_post_product() {
-    Map<String, Object> info = new HashMap<>();
-
-    Response post = post("products", info);
+  public void should_return_201_when_post_product_with_parameters() {
+    Response post = post("products", TestHelper.productMapApi());
 
     assertThat(post.getStatus(), is(201));
   }

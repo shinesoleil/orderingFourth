@@ -11,7 +11,8 @@ real: 6 min
  r: 24 min
 
 3. return 201 when POST product with parameters  
- e: 5 min
+ e: 5 min  
+ r: 7 min
 
 4. return 200 when GET products  
  e: 3 min
