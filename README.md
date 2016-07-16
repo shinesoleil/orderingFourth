@@ -15,7 +15,8 @@ real: 6 min
  r: 7 min
 
 4. return 200 when GET products  
- e: 3 min
+ e: 3 min  
+ r: 3 min
 
 8. find all products 
  e: 15 min 

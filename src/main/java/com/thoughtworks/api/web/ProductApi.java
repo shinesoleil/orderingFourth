@@ -3,10 +3,7 @@ package com.thoughtworks.api.web;
 import com.thoughtworks.api.domain.product.Product;
 import com.thoughtworks.api.domain.product.ProductRepository;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -33,5 +30,10 @@ public class ProductApi {
     } else {
       throw new WebApplicationException(Response.Status.BAD_REQUEST);
     }
+  }
+
+  @GET
+  public Response findProducts() {
+    return Response.status(200).build();
   }
 }
