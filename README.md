@@ -4,6 +4,7 @@
 
 1. return 201 when POST product  
 estimate: 10 min  
+real: 6 min
 
 2. create product with parameters and find product by product id  
  e: 20 min  
