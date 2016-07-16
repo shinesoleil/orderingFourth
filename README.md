@@ -8,6 +8,7 @@ real: 6 min
 
 2. create product with parameters and find product by product id  
  e: 20 min  
+ r: 24 min
 
 3. return 201 when POST product with parameters  
  e: 5 min

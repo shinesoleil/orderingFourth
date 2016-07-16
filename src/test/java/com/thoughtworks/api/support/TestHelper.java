@@ -50,4 +50,13 @@ public class TestHelper {
             put("role", user.getRole());
         }};
     }
+
+    public static Map<String, Object> productMap(String id) {
+        return new HashMap<String, Object>() {{
+            put("id", id);
+            put("name", "desk");
+            put("description", "black");
+            put("price", 610.00);
+        }};
+    }
 }
