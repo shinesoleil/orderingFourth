@@ -32,7 +32,8 @@ real: 6 min
 
 1. return 200 when GET product by product id  
  e: 5 min  
- r: 
+ r: 10  
+ reason: complete tasking 3 at the same time
  
 
 2. return 404 when GET product by product id fails  

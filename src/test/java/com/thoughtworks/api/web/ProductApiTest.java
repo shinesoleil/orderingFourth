@@ -38,5 +38,12 @@ public class ProductApiTest extends ApiSupport{
   }
 
   @Test
+  public void should_return_200_when_get_product_by_id() {
+    productRepository.create(TestHelper.productMap("1"));
+
+    Response get = get("products/1");
+
+    assertThat(get.getStatus(), is(200));
+  }
 
 }
