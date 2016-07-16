@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
+import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -25,5 +26,17 @@ public class ProductRepositoryTest {
     assertThat(product.getName(), is("desk"));
     assertThat(product.getDescription(), is("black"));
     assertThat(product.getPrice(), is(610.00));
+  }
+
+  @Test
+  public void should_find_all_products() {
+    productRepository.create(TestHelper.productMap("1"));
+    productRepository.create(TestHelper.productMap("2"));
+
+    List<Product> productList = productRepository.find();
+
+    assertThat(productList.size(), is(2));
+    assertThat(productList.get(0).getId(), is("1"));
+
   }
 }

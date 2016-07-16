@@ -18,8 +18,9 @@ real: 6 min
  e: 3 min  
  r: 3 min
 
-8. find all products 
- e: 15 min 
+8. find all products  
+ e: 15 min  
+ r: 6 min
  
 9. return a list of products when GET products  
  e: 5 min
