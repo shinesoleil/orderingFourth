@@ -1,5 +1,10 @@
 #Ordering tasking
 
+### Total Time: 300 min (5 hours)
+### Total Estimated Time: 245 min (about 4 hours)
+### Time wasted on: create and find Orders. Should divide orders tasks into smaller ones.
+
+
 * ###/products
 
 1. return 201 when POST product  
