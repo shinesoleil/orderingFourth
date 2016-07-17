@@ -11,5 +11,10 @@
         FROM users U
         WHERE U.id = #{id}
     </select>
-    
+
+    <select id="find" resultMap="records.user">
+        SELECT *
+        FROM users
+    </select>
+
 </mapper>

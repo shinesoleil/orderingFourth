@@ -66,7 +66,8 @@ real: 6 min
  r: 2 min
  
 5. find all users  
- e: 6 min 
+ e: 6 min  
+ r: 6 min
  
 6. return a list of users when GET users 
  e: 5 min 
