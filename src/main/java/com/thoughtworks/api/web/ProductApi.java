@@ -43,6 +43,12 @@ public class ProductApi {
   @Path("{productId}")
   @Produces(MediaType.APPLICATION_JSON)
   public Product findById(@PathParam("productId") String productId) {
-    return productRepository.findById(productId);
+    Product product =  productRepository.findById(productId);
+
+    if (product != null) {
+      return product;
+    } else {
+      throw new WebApplicationException(Response.Status.NOT_FOUND);
+    }
   }
 }

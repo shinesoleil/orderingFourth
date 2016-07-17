@@ -18,11 +18,11 @@ real: 6 min
  e: 3 min  
  r: 3 min
 
-8. find all products  
+5. find all products  
  e: 15 min  
  r: 6 min
  
-9. return a list of products when GET products  
+6. return a list of products when GET products  
  e: 5 min  
  r: 15 min  
  reason: should have implement Record interface
@@ -32,64 +32,50 @@ real: 6 min
 
 1. return 200 when GET product by product id  
  e: 5 min  
- r: 10  
+ r: 10 min 
  reason: complete tasking 3 at the same time
  
 
 2. return 404 when GET product by product id fails  
- e: 5 min 
+ e: 5 min   
+ r: 3 min
  
 
 3. return product when GET product by product id  
- e: 10 min 
+ e: 10 min  
+ r: 0 min  
+ reason: already done in task 1.
  
 
 * ###/users
 
 1. return 201 when POST user  
- e:  
+ e: 8 min 
  
+2. create user with parameters and find user by user id  
+ e: 20 min 
 
-2. create user with name and find by userId  
- e:  
-
-3. return 201 when POST user with name  
- e:  
+3. return 201 when POST user with parameters  
+ e: 10 min 
  
-
-4. create user with parameters and find by userId  
- e:  
-
-5. return 201 when POST user with parameters  
- e:  
-
-6. return 500 when POST user parameters are not valid  
- e:  
+4. return 200 when GET users  
+ e: 3 min 
  
-
-7. return 200 when GET users  
- e:  
+5. find all users  
+ e: 6 min 
  
-
-8. find users  
- e:  
- 
-
-9. return a list of users when GET users 
- e:  
+6. return a list of users when GET users 
+ e: 5 min 
  
 
 * ###/users/{userId}
 
-1. return 200 when GET by userId  
- e:  
+1. return user when GET user by user id  
+e: 10 min
  
-
 2. return 404 when GET by userId fails  
- e:  
+ e: 5 min 
 
-3. return user when GET by userId  
- e: 
 
 * ###/users/{userId}/orders
 
