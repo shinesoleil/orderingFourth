@@ -77,7 +77,8 @@ real: 6 min
 * ###/users/{userId}
 
 1. return user when GET user by user id  
-e: 10 min
+e: 10 min  
+r: 7 min
  
 2. return 404 when GET by userId fails  
  e: 5 min 

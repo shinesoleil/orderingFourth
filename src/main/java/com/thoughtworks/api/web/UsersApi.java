@@ -38,4 +38,17 @@ public class UsersApi {
   public List<User> findUsers() {
     return userRepository.find();
   }
+
+  @GET
+  @Path("{userId}")
+  @Produces(MediaType.APPLICATION_JSON)
+  public User findById(@PathParam("userId") String userId) {
+    User user = userRepository.findById(userId);
+
+    if (user != null) {
+      return user;
+    } else {
+      throw new WebApplicationException(Response.Status.NOT_FOUND);
+    }
+  }
 }
