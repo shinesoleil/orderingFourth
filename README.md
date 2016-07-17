@@ -88,52 +88,34 @@ r: 7 min
 * ###/users/{userId}/orders
 
 1. return 201 when POST order  
- e:  
+ e: 5 min  
+ r: 6 min
+
+2. create order with parameters and find by user id and order id  
+ e: 25 min 
+
+3. return 201 when POST order with parameters  
+ e: 8 min 
+   
+4. return 200 when GET orders  
+ e: 3 min
  
+5. find orders  
+ e: 5 min
 
-2. create order with name and find by orderId  
- e: 
-
-3. return 201 when POST order with name  
- e:  
- 
-
-4. create order with parameters and find by userId and orderId  
- e:  
-
-5. return 201 when POST order with parameters  
- e:  
-  
-
-6. return 500 when POST order fails  
- e:  
- 
-
-7. return 200 when GET orders  
- e:  
- 
-
-8. find orders  
- e:  
- 
-
-9. return a list of order when GET orders  
- e:  
+6. return a list of order when GET orders  
+ e: 5 min
  
 
 * ###/users/{userId}/orders/{orderId}
 
-1. return 200 when GET by userId and orderId  
- e:  
+1. return order when GET by user id and order id  
+ e: 10 min 
  
 
-2. return 404 when GET by userId and orderId fails  
- e:  
+2. return 404 when GET by user id and order id fails  
+ e: 3 min 
  
-
-3. return order when GET by userId and orderId  
- e:
-
 * ###/users/{userId}/orders/{orderId}/payment
 
 1. return 201 when POST  
