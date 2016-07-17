@@ -5,6 +5,7 @@ import com.thoughtworks.api.domain.Order.OrderRepository;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.*;
 
@@ -37,7 +38,8 @@ public class OrdersApi {
   }
 
   @GET
-  public Response findOrders() {
-    return Response.status(200).build();
+  @Produces(MediaType.APPLICATION_JSON)
+  public List<Order> findOrders() {
+    return orderRepository.find();
   }
 }

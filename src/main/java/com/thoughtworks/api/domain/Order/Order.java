@@ -4,6 +4,7 @@ import com.thoughtworks.api.infrastructure.records.Record;
 import com.thoughtworks.api.web.jersey.Routes;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -53,11 +54,17 @@ public class Order implements Record {
 
   @Override
   public Map<String, Object> toRefJson(Routes routes) {
-    return null;
+    return new HashMap<String, Object>() {{
+      put("uri", "orders/" + getId());
+      put("name", getName());
+      put("address", getAddress());
+      put("phone", getPhone());
+      put("create_at", getTime());
+    }};
   }
 
   @Override
   public Map<String, Object> toJson(Routes routes) {
-    return null;
+    return toRefJson(routes);
   }
 }
