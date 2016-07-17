@@ -13,4 +13,6 @@ public interface OrderMapper {
 
   Order findById(@Param("orderId") String orderId,
                  @Param("userId") String userId);
+
+  List<Order> find();
 }

@@ -28,4 +28,17 @@
         WHERE O.user_id = #{userId}
     </select>
 
+    <select id="find" resultMap="records.order">
+        SELECT
+        O.id as id,
+        O.name as name,
+        O.address as address,
+        O.phone as phone,
+        I.order_id as order_id,
+        I.product_id as product_id,
+        I.quantity as quantity
+        FROM orders O LEFT JOIN order_items I
+        ON O.id = I.order_id
+    </select>
+
 </mapper>

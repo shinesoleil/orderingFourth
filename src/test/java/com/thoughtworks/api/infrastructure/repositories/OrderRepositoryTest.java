@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
+import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -27,13 +28,23 @@ public class OrderRepositoryTest {
   public void should_create_order_with_parameters_and_find_by_user_id_and_order_id() {
     productRepository.create(TestHelper.productMap("product1"));
     userRepository.create(TestHelper.userMap("user1"));
-
-
     orderRepository.create(TestHelper.orderMap("order1", "user1", "product1"));
 
     Order order = orderRepository.findById("order1", "user1");
 
     assertThat(order.getId(), is("order1"));
     assertThat(order.getOrderItems().size(), is(1));
+  }
+
+  @Test
+  public void should_find_all_orders() {
+    productRepository.create(TestHelper.productMap("product1"));
+    userRepository.create(TestHelper.userMap("user1"));
+    orderRepository.create(TestHelper.orderMap("order1", "user1", "product1"));
+
+    List<Order> orderList = orderRepository.find();
+
+    assertThat(orderList.size(), is(1));
+
   }
 }

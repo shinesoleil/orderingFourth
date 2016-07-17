@@ -21,4 +21,9 @@ public class OrderRepository implements com.thoughtworks.api.domain.Order.OrderR
   public Order findById(String orderId, String userId) {
     return orderMapper.findById(orderId, userId);
   }
+
+  @Override
+  public List<Order> find() {
+    return orderMapper.find();
+  }
 }

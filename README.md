@@ -106,7 +106,8 @@ r: 7 min
  r: 2 min
  
 5. find orders  
- e: 5 min
+ e: 5 min  
+ r: 5 min
 
 6. return a list of order when GET orders  
  e: 5 min
