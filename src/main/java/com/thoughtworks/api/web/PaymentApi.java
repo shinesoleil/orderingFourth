@@ -30,4 +30,16 @@ public class PaymentApi {
       throw new WebApplicationException(Response.Status.BAD_REQUEST);
     }
   }
+
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Payment findById(@PathParam("orderId") String orderId) {
+    Payment payment = paymentRepository.findById(orderId);
+
+    if (payment != null) {
+      return payment;
+    } else {
+      throw new WebApplicationException(Response.Status.NOT_FOUND);
+    }
+  }
 }

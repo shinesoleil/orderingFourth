@@ -139,8 +139,9 @@ r: 7 min
  e: 8 min  
  r: 5 min
 
-4. return payment when GET payments by and order id   
- e: 5 min
+4. return payment when GET payments by order id   
+ e: 5 min  
+ r: 7 min
  
 5. return 404 when GET payments by  order id fails  
  e: 3 min
