@@ -48,6 +48,12 @@ public class OrdersApi {
   @Produces(MediaType.APPLICATION_JSON)
   public Order findByIds(@PathParam("userId") String userId,
                          @PathParam("orderId") String orderId) {
-    return orderRepository.findById(orderId, userId);
+    Order order =  orderRepository.findById(orderId, userId);
+
+    if (order != null) {
+      return order;
+    } else {
+      throw new WebApplicationException(Response.Status.NOT_FOUND);
+    }
   }
 }

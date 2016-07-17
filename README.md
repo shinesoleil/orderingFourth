@@ -119,10 +119,11 @@ r: 7 min
 
 1. return order when GET order by user id and order id  
  e: 10 min  
- r: 3 min
+ r: 3 min 
 
-2. return 404 when GET by user id and order id fails  
- e: 3 min 
+2. return 404 when GET order by user id and order id fails  
+ e: 3 min  
+ r: 3 min
  
 * ###/users/{userId}/orders/{orderId}/payment
 
