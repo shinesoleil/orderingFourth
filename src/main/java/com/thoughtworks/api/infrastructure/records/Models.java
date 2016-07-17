@@ -2,6 +2,7 @@ package com.thoughtworks.api.infrastructure.records;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
+import com.thoughtworks.api.domain.Order.OrderRepository;
 import com.thoughtworks.api.domain.product.ProductRepository;
 import com.thoughtworks.api.domain.user.UserRepository;
 import org.apache.ibatis.plugin.Interceptor;
@@ -53,6 +54,7 @@ public class Models extends AbstractModule {
         bindPersistence();
         bind(ProductRepository.class).to(com.thoughtworks.api.infrastructure.repositories.ProductRepository.class);
         bind(UserRepository.class).to(com.thoughtworks.api.infrastructure.repositories.UserRepository.class);
+        bind(OrderRepository.class).to(com.thoughtworks.api.infrastructure.repositories.OrderRepository.class);
     }
 
     private void bindPersistence() {

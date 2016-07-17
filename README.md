@@ -92,7 +92,9 @@ r: 7 min
  r: 6 min
 
 2. create order with parameters and find by user id and order id  
- e: 25 min 
+ e: 25 min  
+ r: 80 min  
+ reason: use mybatis to insert and find order and orderItems in an efficient way
 
 3. return 201 when POST order with parameters  
  e: 8 min 

@@ -3,8 +3,7 @@ package com.thoughtworks.api.support;
 import com.thoughtworks.api.domain.user.User;
 import com.thoughtworks.api.domain.user.UserRole;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TestHelper {
     private static int auto_increment_key = 1;
@@ -76,6 +75,29 @@ public class TestHelper {
     public static Map<String, Object> userMapApi() {
         return new HashMap<String, Object>() {{
             put("name", "firstUser");
+        }};
+    }
+
+    public static Map<String, Object> orderItemMap(String orderId, String productId) {
+        return new HashMap<String, Object>() {{
+            put("order_id", orderId);
+            put("product_id", productId);
+            put("quantity", 1);
+        }};
+    }
+
+    public static Map<String, Object> orderMap(String orderId, String userId, String productId) {
+        List<Map<String, Object>> orderItemList = new ArrayList<>();
+        orderItemList.add(orderItemMap(orderId, productId));
+
+        return new HashMap<String, Object>() {{
+            put("id", orderId);
+            put("name", "firstOrder");
+            put("address", "Xi'an");
+            put("phone", "13099999999");
+            put("time", new Date());
+            put("user_id", userId);
+            put("order_items", orderItemList);
         }};
     }
 }

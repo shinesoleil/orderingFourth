@@ -20,4 +20,16 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
     </resultMap>
+
+    <resultMap id="order" type="com.thoughtworks.api.domain.Order.Order">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="address" column="address"/>
+        <result property="phone" column="phone"/>
+        <collection property="orderItems" ofType="com.thoughtworks.api.domain.Order.OrderItem">
+            <id property="orderId" column="order_id"/>
+            <result property="productId" column="product_id"/>
+            <result property="quantity" column="quantity"/>
+        </collection>
+    </resultMap>
 </mapper>
