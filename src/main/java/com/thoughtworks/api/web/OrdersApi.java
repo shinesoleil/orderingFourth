@@ -3,10 +3,7 @@ package com.thoughtworks.api.web;
 import com.thoughtworks.api.domain.Order.Order;
 import com.thoughtworks.api.domain.Order.OrderRepository;
 
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.util.*;
@@ -37,5 +34,10 @@ public class OrdersApi {
     } else {
       throw new WebApplicationException(Response.Status.BAD_REQUEST);
     }
+  }
+
+  @GET
+  public Response findOrders() {
+    return Response.status(200).build();
   }
 }

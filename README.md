@@ -102,7 +102,8 @@ r: 7 min
  reason: test became complicated
    
 4. return 200 when GET orders  
- e: 3 min
+ e: 3 min  
+ r: 2 min
  
 5. find orders  
  e: 5 min
