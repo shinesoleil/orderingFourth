@@ -50,10 +50,11 @@ real: 6 min
 * ###/users
 
 1. return 201 when POST user  
- e: 8 min 
+ e: 8 min  
+ r: 5 min
  
 2. create user with parameters and find user by user id  
- e: 20 min 
+ e: 20 min  
 
 3. return 201 when POST user with parameters  
  e: 10 min 

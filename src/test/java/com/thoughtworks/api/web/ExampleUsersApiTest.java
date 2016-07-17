@@ -19,7 +19,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @RunWith(ApiTestRunner.class)
-public class UsersApiTest extends ApiSupport {
+public class ExampleUsersApiTest extends ApiSupport {
     @Inject
     UserRepository userRepository;
 
