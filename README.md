@@ -80,8 +80,9 @@ real: 6 min
 e: 10 min  
 r: 7 min
  
-2. return 404 when GET by userId fails  
- e: 5 min 
+2. return 404 when GET by user id fails  
+ e: 5 min  
+ r: 1 min
 
 
 * ###/users/{userId}/orders

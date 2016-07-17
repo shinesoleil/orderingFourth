@@ -45,4 +45,11 @@ public class UserApiTest extends ApiSupport{
 
     assertThat(get.getStatus(), is(200));
   }
+
+  @Test
+  public void should_return_404_when_get_user_by_user_id_fails() {
+    Response get = get("users/1");
+
+    assertThat(get.getStatus(), is(404));
+  }
 }
