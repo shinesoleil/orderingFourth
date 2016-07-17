@@ -127,37 +127,18 @@ r: 7 min
  
 * ###/users/{userId}/orders/{orderId}/payment
 
-1. return 201 when POST  
- e:  
+1. return 201 when POST payment  
+ e: 5 min  
+ r: 4 min
  
+2. create payment with parameters and find payment by user id and order id  
+ e: 15 min 
 
-2. create payment with amount and find by userId and orderId  
- e:  
+3. return 201 when POST with parameters  
+ e: 8 min 
 
-3. return 201 when POST with amount  
- e:  
+4. return payment when GET payments by user id and order id   
+ e: 5 min
  
-
-4. create payment with parameters and find by userId and orderId  
- e:  
-   
-reason: after previous practice, already able to create repository in one step 
-
-
-5. return 201 when POST with parameters  
- e:  
-
-6. return 500 when POST fails  
- e:  
- 
-
-7. return 200 when GET payments by orderId  
- e:  
- 
-
-8. find all payments  
- e:  
- 
-
-9. return payments when GET 
- e:  
+5. return 404 when GET payments by user id and order id fails  
+ e: 3 min

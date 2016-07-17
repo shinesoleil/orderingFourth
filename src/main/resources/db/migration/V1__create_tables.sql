@@ -32,4 +32,14 @@ CREATE TABLE order_items (
 
   FOREIGN KEY (product_id)
     REFERENCES products(id)
+);
+
+CREATE TABLE payments (
+  order_id VARCHAR(255) PRIMARY KEY,
+  pay_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  pay_type VARCHAR(255) NOT NULL ,
+  amount FLOAT NOT NULL ,
+
+  FOREIGN KEY (order_id)
+  REFERENCES orders(id)
 )
