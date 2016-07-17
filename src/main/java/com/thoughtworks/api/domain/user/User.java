@@ -3,6 +3,7 @@ package com.thoughtworks.api.domain.user;
 import com.thoughtworks.api.infrastructure.records.Record;
 import com.thoughtworks.api.web.jersey.Routes;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class User implements Record {
@@ -27,11 +28,15 @@ public class User implements Record {
 
   @Override
   public Map<String, Object> toRefJson(Routes routes) {
-    return null;
+    return new HashMap<String, Object>() {{
+      put("id", getId());
+      put("uri", "users/" + getId());
+      put("name", getName());
+    }};
   }
 
   @Override
   public Map<String, Object> toJson(Routes routes) {
-    return null;
+    return toRefJson(routes);
   }
 }

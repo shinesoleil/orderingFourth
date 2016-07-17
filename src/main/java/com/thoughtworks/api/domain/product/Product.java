@@ -43,7 +43,7 @@ public class Product implements Record{
   public Map<String, Object> toRefJson(Routes routes) {
     return new HashMap<String, Object>() {{
       put("id", getId());
-      put("uri", "product/" + getId());
+      put("uri", "products/" + getId());
       put("name", getName());
       put("description", getDescription());
       put("price", getPrice());

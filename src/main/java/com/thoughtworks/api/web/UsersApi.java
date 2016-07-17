@@ -8,6 +8,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 @Path("users")
@@ -33,7 +34,8 @@ public class UsersApi {
   }
 
   @GET
-  public Response findUsers() {
-    return Response.status(200).build();
+  @Produces(MediaType.APPLICATION_JSON)
+  public List<User> findUsers() {
+    return userRepository.find();
   }
 }

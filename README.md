@@ -69,8 +69,9 @@ real: 6 min
  e: 6 min  
  r: 6 min
  
-6. return a list of users when GET users 
- e: 5 min 
+6. return a list of users when GET users  
+ e: 5 min  
+ r: 6 min
  
 
 * ###/users/{userId}
