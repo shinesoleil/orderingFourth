@@ -8,19 +8,16 @@
             <idArg column="userId" javaType="string"/>
         </constructor>
     </resultMap>
-
-    <resultMap id="user" type="com.thoughtworks.api.domain.user.User">
-        <result property="name" column="userName"/>
-        <result property="email" column="userEmail"/>
-        <result property="role" column="userRole"/>
-        <result property="password" column="userPassword"/>
-        <association property="userId" resultMap="userId"/>
-    </resultMap>
-
+    
     <resultMap id="product" type="com.thoughtworks.api.domain.product.Product">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="description" column="description"/>
         <result property="price" column="price"/>
+    </resultMap>
+    
+    <resultMap id="user" type="com.thoughtworks.api.domain.user.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
     </resultMap>
 </mapper>

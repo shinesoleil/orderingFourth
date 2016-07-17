@@ -1,8 +1,6 @@
 package com.thoughtworks.api.support;
 
 import com.thoughtworks.api.domain.user.User;
-import com.thoughtworks.api.domain.user.UserId;
-import com.thoughtworks.api.domain.user.UserRepository;
 import com.thoughtworks.api.domain.user.UserRole;
 
 import java.util.HashMap;
@@ -25,31 +23,31 @@ public class TestHelper {
         return stackMap;
     }
 
-    public static Map<String, Object> userMap(String email, String name) {
-        return new HashMap<String, Object>() {{
-            put("name", name);
-            put("email", email);
-        }};
-    }
+//    public static Map<String, Object> userMap(String email, String name) {
+//        return new HashMap<String, Object>() {{
+//            put("name", name);
+//            put("email", email);
+//        }};
+//    }
 
     public static User userForTest(String id, String name, UserRole role) {
         String password_123 = "$2a$04$DbgJbGA4dkQSzAvXvJcGBOv5kHuMBzrWfne3x3Cx4JQv4IJcxtBIW";
-        return new User(new UserId(id), name, name + "@tw.com", role, password_123);
+        return new User(id, name);
     }
 
-    public static User userFixture(UserRepository userRepository, UserRole role) {
-        final String id = new Integer(auto_increment_key++).toString();
-        User user = userForTest(id, "name-" + id, role);
-        userRepository.save(user);
-        return user;
-    }
-
-    public static Map<String, Object> userJsonForTest(User user) {
-        return new HashMap<String, Object>() {{
-            put("id", user.getUserId().id());
-            put("role", user.getRole());
-        }};
-    }
+//    public static User userFixture(UserRepository userRepository, UserRole role) {
+//        final String id = new Integer(auto_increment_key++).toString();
+//        User user = userForTest(id, "name-" + id, role);
+//        userRepository.save(user);
+//        return user;
+//    }
+//
+//    public static Map<String, Object> userJsonForTest(User user) {
+//        return new HashMap<String, Object>() {{
+//            put("id", user.getUserId().id());
+//            put("role", user.getRole());
+//        }};
+//    }
 
     public static Map<String, Object> productMap(String id) {
         return new HashMap<String, Object>() {{
@@ -65,6 +63,13 @@ public class TestHelper {
             put("name", "desk");
             put("description", "black");
             put("price", 610.00);
+        }};
+    }
+
+    public static Map<String, Object> userMap(String id) {
+        return new HashMap<String, Object>() {{
+            put("id", id);
+            put("name", "firstUser");
         }};
     }
 }

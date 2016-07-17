@@ -23,4 +23,5 @@ public class UserApiTest extends ApiSupport{
 
     assertThat(post.getStatus(), is(201));
   }
+
 }
