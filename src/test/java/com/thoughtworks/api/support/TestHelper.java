@@ -120,4 +120,12 @@ public class TestHelper {
             put("order_items", orderItemList);
         }};
     }
+
+    public static Map<String, Object> paymentMap(String orderId) {
+        return new HashMap<String, Object>() {{
+            put("order_id", orderId);
+            put("pay_type", "cash");
+            put("amount", 1000);
+        }};
+    }
 }

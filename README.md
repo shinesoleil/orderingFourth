@@ -131,8 +131,9 @@ r: 7 min
  e: 5 min  
  r: 4 min
  
-2. create payment with parameters and find payment by user id and order id  
- e: 15 min 
+2. create payment with parameters and find payment by order id  
+ e: 15 min  
+ r: 24 min
 
 3. return 201 when POST with parameters  
  e: 8 min 

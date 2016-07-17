@@ -32,4 +32,12 @@
             <result property="quantity" column="quantity"/>
         </collection>
     </resultMap>
+
+
+    <resultMap id="payment" type="com.thoughtworks.api.domain.payment.Payment">
+        <id property="orderId" column="order_id"/>
+        <result property="payType" column="pay_type"/>
+        <result property="amount" column="amount"/>
+        <result property="payTime" column="pay_time"/>
+    </resultMap>
 </mapper>
