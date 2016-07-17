@@ -55,4 +55,15 @@ public class OrdersApiTest extends ApiSupport{
 
     assertThat(get.readEntity(List.class).size(), is(1));
   }
+
+  @Test
+  public void should_return_order_when_get_order_by_user_id_and_order_id() {
+    productRepository.create(TestHelper.productMap("product1"));
+    userRepository.create(TestHelper.userMap("user1"));
+    orderRepository.create(TestHelper.orderMap("order1", "user1", "product1"));
+
+    Response get = get("users/user1/orders/order1");
+
+    assertThat(get.getStatus(), is(200));
+  }
 }
