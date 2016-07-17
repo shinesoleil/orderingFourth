@@ -52,4 +52,12 @@ public class PaymentApiTest extends ApiSupport{
 
     assertThat(get.getStatus(), is(200));
   }
+
+  @Test
+  public void should_return_404_when_get_payment_by_order_id_fails() {
+    Response get = get("users/user1/orders/order1/payment");
+
+    assertThat(get.getStatus(), is(404));
+
+  }
 }

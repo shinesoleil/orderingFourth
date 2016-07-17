@@ -144,4 +144,5 @@ r: 7 min
  r: 7 min
  
 5. return 404 when GET payments by  order id fails  
- e: 3 min
+ e: 3 min  
+ r: 2 min
