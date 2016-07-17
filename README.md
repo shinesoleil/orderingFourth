@@ -59,6 +59,7 @@ real: 6 min
 
 3. return 201 when POST user with parameters  
  e: 10 min  
+ r: 7 min
  
 4. return 200 when GET users  
  e: 3 min 

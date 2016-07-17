@@ -72,4 +72,10 @@ public class TestHelper {
             put("name", "firstUser");
         }};
     }
+
+    public static Map<String, Object> userMapApi() {
+        return new HashMap<String, Object>() {{
+            put("name", "firstUser");
+        }};
+    }
 }
