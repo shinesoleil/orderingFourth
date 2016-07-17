@@ -62,7 +62,8 @@ real: 6 min
  r: 7 min
  
 4. return 200 when GET users  
- e: 3 min 
+ e: 3 min  
+ r: 2 min
  
 5. find all users  
  e: 6 min 
