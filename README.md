@@ -136,10 +136,11 @@ r: 7 min
  r: 24 min
 
 3. return 201 when POST with parameters  
- e: 8 min 
+ e: 8 min  
+ r: 5 min
 
-4. return payment when GET payments by user id and order id   
+4. return payment when GET payments by and order id   
  e: 5 min
  
-5. return 404 when GET payments by user id and order id fails  
+5. return 404 when GET payments by  order id fails  
  e: 3 min

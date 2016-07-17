@@ -128,4 +128,11 @@ public class TestHelper {
             put("amount", 1000);
         }};
     }
+
+    public static Map<String, Object> paymentMapApi() {
+        return new HashMap<String, Object>() {{
+            put("pay_type", "cash");
+            put("amount", 1000);
+        }};
+    }
 }
