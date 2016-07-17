@@ -100,4 +100,24 @@ public class TestHelper {
             put("order_items", orderItemList);
         }};
     }
+
+    public static Map<String, Object> orderItemMapApi(String productId) {
+        return new HashMap<String, Object>() {{
+            put("product_id", productId);
+            put("quantity", 3);
+        }};
+    }
+
+    public static Map<String, Object> orderMapApi(String productId) {
+        List<Map<String, Object>> orderItemList = new ArrayList<>();
+        orderItemList.add(orderItemMapApi(productId));
+
+        return new HashMap<String, Object>() {{
+            put("name", "firstOrder");
+            put("address", "Xi'an");
+            put("phone", "13099999999");
+            put("time", new Date());
+            put("order_items", orderItemList);
+        }};
+    }
 }

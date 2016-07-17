@@ -97,7 +97,9 @@ r: 7 min
  reason: use mybatis to insert and find order and orderItems in an efficient way
 
 3. return 201 when POST order with parameters  
- e: 8 min 
+ e: 8 min  
+ r: 20 min  
+ reason: test became complicated
    
 4. return 200 when GET orders  
  e: 3 min
